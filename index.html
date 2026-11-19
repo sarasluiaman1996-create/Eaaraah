@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعارة | منصة تبادل الأدوات الجامعية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">إعارة</div>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="page2.html">عن المشروع</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>إعارة .. تعاون طلابي يصنع الفرق</h1>
+    <p>منصة تساعد الطلاب على استعارة الأدوات الدراسية ومشاركتها داخل الجامعة بطريقة سهلة وسريعة.</p>
+    <a href="page2.html" class="button">اكتشف المنصة</a>
+</section>
+
+<section class="section">
+    <h2>الأدوات المتاحة</h2>
+
+    <div class="cards">
+
+        <div class="card" onclick="openBorrowForm('الكتب الدراسية')">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=80" alt="كتب دراسية">
+            <h3>الكتب الدراسية</h3>
+            <p>استعارة الكتب والمراجع الدراسية التي يحتاجها الطلاب.</p>
+            <button>طلب استعارة</button>
+        </div>
+
+        <div class="card" onclick="openBorrowForm('الآلة الحاسبة')">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="آلة حاسبة">
+            <p>تبادل الآلات الحاسبة بين الطلاب عند الحاجة.</p>
+            <button>طلب استعارة</button>
+        </div>
+
+        <div class="card" onclick="openBorrowForm('الأدوات التقنية')">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=80" alt="أجهزة تقنية">
+            <h3>الأدوات التقنية</h3>
+            <p>مشاركة الشواحن والأجهزة التقنية والأدوات التعليمية.</p>
+            <button>طلب استعارة</button>
+        </div>
+
+        <div class="card" onclick="openBorrowForm('الأدوات المكتبية')">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=500&q=80" alt="أدوات مكتبية">
+            <h3>الأدوات المكتبية</h3>
+            <p>توفير الأدوات المكتبية مثل الأقلام والملفات وغيرها.</p>
+            <button>طلب استعارة</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="borrowForm" style="display:none;">
+    <h2>طلب استعارة أداة</h2>
+
+    <form onsubmit="submitBorrow(event)">
+        <label>الأداة المطلوبة:</label>
+        <input type="text" id="toolName" readonly>
+
+        <label>اسم الطالب:</label>
+        <input type="text" required placeholder="اكتب اسمك">
+
+        <label>وسيلة التواصل:</label>
+        <input type="text" required placeholder="رقم الجوال أو البريد">
+
+        <label>مدة الاستعارة:</label>
+        <input type="text" required placeholder="مثلاً: يومان">
+
+        <button type="submit">إرسال الطلب</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<script>
+function openBorrowForm(tool) {
+    document.getElementById("borrowForm").style.display = "block";
+    document.getElementById("toolName").value = tool;
+    document.getElementById("borrowForm").scrollIntoView({behavior: "smooth"});
+}
+
+function submitBorrow(event) {
+    event.preventDefault();
+    document.getElementById("message").innerText =
+        "تم تسجيل طلب الاستعارة بنجاح!";
+}
+</script>
+
+<section class="section">
+    <h2>كيف تعمل منصة إعارة؟</h2>
+    <ol>
+        <li>تصفح الأدوات المتاحة.</li>
+        <li>اختر الأداة التي تحتاجها.</li>
+        <li>تواصل مع صاحب الأداة.</li>
+        <li>استلم الأداة واتفق على موعد إعادتها.</li>
+    </ol>
+</section>
+
+<section class="section">
+    <h2>لماذا إعارة؟</h2>
+    <ul>
+        <li>تعزيز التعاون بين الطلاب.</li>
+        <li>توفير الأدوات الدراسية عند الحاجة.</li>
+        <li>تشجيع المشاركة والاستفادة من الموارد.</li>
+        <li>تقليل التكاليف على الطلاب.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>منصة إعارة | مشروع طلابي</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

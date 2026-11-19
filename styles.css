@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f6;
+    color: #253d35;
+    line-height: 1.8;
+}
+
+header {
+    background-color: #176b57;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #d6f3e8;
+}
+
+.hero {
+    background-color: #dcefe7;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 35px;
+    color: #176b57;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #176b57;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: #10513f;
+}
+
+.section {
+    padding: 40px 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h1,
+.section h2 {
+    color: #176b57;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #176b57;
+}
+
+ul,
+ol {
+    padding-right: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    margin-top: 25px;
+}
+
+footer {
+    background-color: #176b57;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+}
+/* تنسيق نموذج الاستعارة */
+
+#borrowForm {
+    background-color: #dcefe8;
+    border-radius: 20px;
+    padding: 35px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+#borrowForm h2 {
+    color: #176b57;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#borrowForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#borrowForm label {
+    font-weight: bold;
+    color: #176b57;
+}
+
+#borrowForm input {
+    padding: 14px;
+    border: 1px solid #c5ddd3;
+    border-radius: 10px;
+    font-size: 16px;
+    direction: rtl;
+}
+
+#borrowForm input:focus {
+    outline: 2px solid #176b57;
+}
+
+#borrowForm button {
+    background-color: #176b57;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#borrowForm button:hover {
+    background-color: #105443;
+}
+
+#message {
+    text-align: center;
+    color: #176b57;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
